@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* , :before , :after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+
+body {
+    font-family: "Poppins",sans-serif;
+}
+
+.main {
+    background-color: #333333;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.login {
+    position: relative;
+    background: #686d6f7a;
+    padding: 35px 40px;
+    border-radius: 4px;
+    z-index: 1;
+    overflow: hidden;
+}
+.login:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    opacity: 0.8;
+}
+.heading {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 18px;
+    color: white;
+}
+.input {
+    display: block;
+    margin-bottom: 13px;
+    margin-top: 11px;
+}
+.input label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+}
+.input input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    border-radius: 4px;
+    background: #0000002b;
+    color: white;
+    transition: all 0.2s ease;
+}
+.input input:hover {
+    background: #3d434c;
+}
+.input input:focus {
+    box-shadow: 0px 2px 2px #0000002b , 0px 5px 10px #00000036;
+    background: #434343;
+}
+.login-btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    font-size: 14px;
+    background: #00000038;
+    border: 2px solid #38363654;
+    color: #e1e1e1;
+    border-radius: 4px;
+    width: 100%;
+    transition: all 0.2s cubic-bezier(.79,.14,.15,.86);
+    cursor: pointer;
+}
+.login-btn:hover {
+    background: #0663b4;
+    transition: all 0.1s ease;
+}
+.login-btn:focus {
+    box-shadow: 0px 0px 0px 2px #a7a7a7b5;
+    background: #00000061;
+}
+.meta-text {
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: white;
+}
+.social-icons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icon {
+    min-height: 40px;
+    background: var(--c);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 28px;
+    box-shadow: 0px 4px 8px #0c0b0b00;
+    transition: all 0.2s ease;
+    border: none;
+    outline: none;
+}
+.social-icon:hover {
+    box-shadow: 0px 4px 14px #0000007a;
+}
+.social-icon:focus {
+    box-shadow: 0px 0px 0px 2px currentColor;
+    transform: scale(.9);
+}
+.social-icon * {
+    pointer-events: none;
+    fill: #fff;
+}
+.social-icon.fb {
+    --c: #4267B2;
+}
+.social-icon.pr {
+    --c: #E60023;
+}
+.social-icon.in {
+    --c: #5B51D8;
+}
+.box1 {
+    animation: moveBox1 2s infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+    top: 0;
+    height: 20%;
+    width: 15%;
+    position: absolute;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+    opacity: 1;
+    color: whitesmoke;
+}
+.box2 {
+    animation: moveBox2 2s infinite;
+    animation-direction: alternate;
+    left: 0;
+    height: 20%;
+    width: 15%;
+    position: absolute;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+}
+.box3 {
+    animation: moveBox3 2s infinite;
+    animation-direction: alternate;
+    bottom: 0;
+    height: 20%;
+    width: 15%;
+    position: absolute;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+}
+.box4 {
+    animation: moveBox4 2s infinite;
+    animation-direction: alternate;
+    right: 100px;
+    height: 20%;
+    width: 15%;
+    position: absolute;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+}
+
+@keyframes moveBox1 {
+   from {
+       transform: translate(0, 0);
+   }
+   to {
+       transform: translate(80%, 80%);
+   }
+}
+@keyframes moveBox2 {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(35%, 70%);
+    }
+}
+@keyframes moveBox3 {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(70%, 20%);
+    }
+}
+@keyframes moveBox4 {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-10%, -30%);
+    }
+}
+
+
+
+

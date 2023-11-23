@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: grid;
+    height: 7vh;
+    grid-template-areas:
+    "titleLogo inputField bucket profile";
+    grid-template-rows: 1fr;
+    grid-template-columns: 5% 1fr 15% 15%;
+    align-items: center;
+}
+.main {
+    font-family: inherit;
+    color: #DEDEE2;
+    background-color: #333333;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.titleLogo {
+    margin-left: 5px;
+    grid-area: titleLogo;
+}
+.inputField {
+    grid-area: inputField;
+    padding-left: 30%;
+}
+
+.inputField input {
+    padding: 10px;
+    position: relative;
+    border-radius: 6px;
+    background-color: #F4F5F6;
+    height: 30%;
+    width: 70%;
+}
+.bucket {
+    width: 100%;
+    height: 100%;
+    grid-area: bucket;
+}
+.bucket div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.bucket span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.bucket img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    grid-area: profile;
+}
+.profile div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.profile span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.profile img {
+    margin-right: 5px;
+}
+.breakLine {
+    width: 100%;
+    height: 1px;
+    flex-shrink: 0;
+    background: #E3E3E8;
+}
+.content {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.product {
+    color: #1E1E1E;
+    font-family: A1 Sans, serif;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border-radius: 10px;
+    width: 65%;
+    height:80vh;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    display: flex;
+}
+.photos {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.information {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+    width: 50%;
+    height: 100%;
+    gap: 5%;
+}
+.photos img {
+    width: 80%;
+    height: 80%;
+}
+.valuePrice {
+    color: #1E1E1E;
+    font-family: A1 Sans, serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5%;
+}
+.buy {
+    color: #1E1E1E;
+    font-family: A1 Sans, serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100%;
+    width: 40%;
+}
+.addToBucket {
+    color: #1E1E1E;
+    font-family: A1 Sans, serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100%;
+    width: 40%;
+    margin-right: 5%;
+}

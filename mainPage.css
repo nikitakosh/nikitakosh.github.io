@@ -1,23 +1,30 @@
 body {
     padding: 0;
     margin: 0;
+}
+.main {
+    font-family: inherit;
+    color: #DEDEE2;
+    background-color: #333333;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-.main {
-    position: relative;
+.contentMain {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    flex: 1;
-    overflow-y: auto;
+    flex-grow: 1;
 }
 header {
     display: grid;
     height: 7vh;
     grid-template-areas:
-    "titleLogo inputField location phone profile";
+    "titleLogo inputField bucket profile";
     grid-template-rows: 1fr;
-    grid-template-columns: 5% 1fr 15% 15% 15%;
+    grid-template-columns: 5% 1fr 15% 15%;
     align-items: center;
 }
 
@@ -35,16 +42,15 @@ header {
     position: relative;
     border-radius: 6px;
     background-color: #F4F5F6;
-    border: 1px solid #DEDEE2;
     height: 30%;
     width: 70%;
 }
-.phone {
-    height: 100%;
+.bucket {
     width: 100%;
-    grid-area: phone;
+    height: 100%;
+    grid-area: bucket;
 }
-.phone div {
+.bucket div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -52,34 +58,14 @@ header {
     justify-content: center;
     gap: 5%;
 }
-.phone span {
-    color: #1B1D1F;
-    font-family: TT Commons, serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22px;
-}
-.location {
-    width: 100%;
-    height: 100%;
-    grid-area: location;
-}
-.location span {
-    color: #1B1D1F;
-    font-family: TT Commons, serif;
+.bucket span {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
 }
-.location div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
+.bucket img {
+    margin-right: 5px;
 }
 .profile {
     width: 100%;
@@ -95,8 +81,6 @@ header {
     gap: 5%;
 }
 .profile span {
-    color: #1B1D1F;
-    font-family: TT Commons, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -112,18 +96,17 @@ header {
     background: #E3E3E8;
 }
 .categories {
-    position: absolute;
-    width: 80%;
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+    gap: 10px;
+    margin-top: 5vh;
+    align-self: center;
+    width: 90%;
     display: grid;
     grid-template-areas:
     "originalAutopart notOriginalAutoparts forVAZ"
     "forBody forTO autoGlasses"
     "carOil autoChemical wheels"
     "batteryGenerator autoLights forSuppliers";
-    grid-template-rows: repeat(4, 40%);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr 1fr;
 }
 .categoryContent {
@@ -139,76 +122,120 @@ header {
     flex-direction: column;
 }
 .textCategoryContent {
-    color: #1B1D1F;
-    font-family: TT Commons, serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
 }
 .countProduct {
-    color: #505255;
-    font-family: TT Commons, serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
 }
 .originalAutoparts {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: originalAutopart;
-    border: 1px solid #E8E3E3;
 }
 .notOriginalAutoparts {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: notOriginalAutoparts;
-    border: 1px solid #E8E3E3;
 }
 .forVAZ {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: forVAZ;
-    border: 1px solid #E8E3E3;
 }
 .forBody {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: forBody;
-    border: 1px solid #E8E3E3;
 }
 .forTO {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: forTO;
-    border: 1px solid #E8E3E3;
 }
 .autoGlasses {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: autoGlasses;
-    border: 1px solid #E8E3E3;
 }
 .carOil {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: carOil;
-    border: 1px solid #E8E3E3;
 }
 .autoChemical {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: autoChemical;
-    border: 1px solid #E8E3E3;
 }
 .wheels {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: wheels;
-    border: 1px solid #E8E3E3;
 }
 .batteryGenerator {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: batteryGenerator;
-    border: 1px solid #E8E3E3;
 }
 .autoLights {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: autoLights;
-    border: 1px solid #E8E3E3;
 }
 .forSuppliers {
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
     grid-area: forSuppliers;
-    border: 1px solid #E8E3E3;
 }
 .forSuppliersBackground {
-    background: rgba(0, 0, 0, 0.5); /* Более темный фон с прозрачностью */
-    backdrop-filter: blur(30px); /* Размытие фона */
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3); /* Более темный фон с прозрачностью */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px ); /* Размытие фона */
 }
 .textForSuppliersCard {
-    color: #FFF;
-    font-family: TT Commons, serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -221,7 +248,6 @@ header {
 }
 footer {
     width: 100%;
-    position: absolute;
     bottom: 0;
     background: linear-gradient(0deg, #2F2B4A 0%, #2F2B4A 100%), #2F323D;
     height: 20%;
@@ -232,8 +258,6 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .footerLi {
-    color: #F4F5F6;
-    font-family: TT Commons, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -270,18 +294,71 @@ footer {
     grid-area: productsAndBrands;
 }
 .footerHeader {
-    color: #FFF;
-    font-family: TT Commons, serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
 }
+.cards {
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+    align-self: center;
+    width: 90%;
+    gap: 10px;
+    display: grid;
+    grid-template-areas:
+    "card1 card2 card3 card4"
+    "card5 card6 card7 card8";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card {
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    padding: 10px;
+    justify-self: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card img {
+    width: 75%;
+}
+.card .cardImg1 {
+    width: 50%;
+}
+.priceAndBasket {
+    display: flex;
+    justify-content: space-between;
+}
+.card .addInBasket {
+    height: 40px;
+    width: 40px;
+}
 @media (max-width: 1200px) {
-    .location span {
-        display: none;
+
+    header {
+        display: grid;
+        height: 7vh;
+        grid-template-areas:
+        "titleLogo inputField bucket profile";
+        grid-template-rows: 1fr;
+        grid-template-columns: 5% 1fr 20% 20%;
+        align-items: center;
     }
-    .phone span {
+}
+@media (max-width: 768px) {
+    .bucket span {
         display: none;
     }
     .profile span {
@@ -289,23 +366,12 @@ footer {
     }
     header {
         display: grid;
-        height: 7vh;
-        grid-template-areas:
-        "titleLogo inputField location phone profile";
-        grid-template-rows: 1fr;
-        grid-template-columns: 5% 1fr 10% 10% 10%;
-        align-items: center;
-    }
-}
-@media (max-width: 768px) {
-    header {
-        display: grid;
         height: 14vh;
         grid-template-areas:
-        "titleLogo location phone profile"
-        "inputField inputField inputField inputField";
+        "titleLogo bucket profile"
+        "inputField inputField inputField";
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 20% 20% 20%;
+        grid-template-columns: 1fr 20% 20%;
         align-items: center;
     }
     .inputField {
@@ -320,15 +386,12 @@ footer {
     .inputField input {
         border-radius: 6px;
         background-color: #F4F5F6;
-        border: 1px solid #DEDEE2;
+        border: 1px solid;
         height: 30%;
         width: 100%;
     }
     .categories {
         width: 80%;
-        margin-top: 5%;
-        margin-left: 10%;
-        margin-right: 10%;
         display: grid;
         grid-template-areas:
         "originalAutopart notOriginalAutoparts"
@@ -337,11 +400,10 @@ footer {
         "carOil autoChemical"
         "wheels batteryGenerator"
         "autoLights forSuppliers";
-        grid-template-rows: repeat(6, 20%);
+        grid-template-rows: repeat(6, 1fr);
         grid-template-columns: 1fr 1fr;
     }
     .categoryContent {
-        position: relative;
         gap: 5%;
         display: flex;
         flex-direction: column;
@@ -353,5 +415,14 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .cards {
+        grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 }
