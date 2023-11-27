@@ -353,6 +353,7 @@ ul {
         grid-template-columns: 5% 1fr 20% 20%;
         align-items: center;
     }
+
 }
 @media (max-width: 768px) {
     .help {
