@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body {
     padding: 0;
     margin: 0;
 }
 .main {
-    font-family: inherit;
-    color: #DEDEE2;
-    background-color: #333333;
+    background: linear-gradient(45deg, #002147, #004225, #4b0082);
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100%;
     display: flex;
@@ -58,12 +59,6 @@ header {
     justify-content: center;
     gap: 5%;
 }
-.bucket span {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-}
 .bucket img {
     margin-right: 5px;
 }
@@ -79,12 +74,6 @@ header {
     align-items: center;
     justify-content: center;
     gap: 5%;
-}
-.profile span {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
 }
 .profile img {
     margin-right: 5px;
@@ -109,6 +98,7 @@ header {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr 1fr;
 }
+
 .categoryContent {
     position: relative;
     gap: 5%;
@@ -121,18 +111,7 @@ header {
     display: flex;
     flex-direction: column;
 }
-.textCategoryContent {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-}
-.countProduct {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-}
+
 .originalAutoparts {
     border-radius: 10px;
     background: rgba( 255, 255, 255, 0.15 );
@@ -237,86 +216,24 @@ header {
 }
 .textForSuppliersCard {
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
 }
 .arrow {
     position: absolute;
     bottom: 4px;
     right: 4px;
 }
-footer {
-    width: 100%;
-    bottom: 0;
-    background: linear-gradient(0deg, #2F2B4A 0%, #2F2B4A 100%), #2F323D;
-    height: 20%;
-    display: grid;
-    grid-template-areas:
-    "menuCompany catalogs help productsAndBrands";
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.footerLi {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.footerBlock {
-    margin-top: 1%;
-    height: 100%;
-    gap: 2%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.menuCompany {
-    height: 100%;
-    width: 100%;
-    grid-area: menuCompany;
-}
-.catalogs {
-    height: 100%;
-    width: 100%;
-    grid-area: catalogs;
-}
-.help {
-    height: 100%;
-    width: 100%;
-    grid-area: help;
-}
-.productsAndBrands {
-    height: 100%;
-    width: 100%;
-    grid-area: productsAndBrands;
-}
-.footerHeader {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-}
+
 .cards {
-    margin-bottom: 4vh;
-    margin-top: 4vh;
-    align-self: center;
-    width: 90%;
-    gap: 10px;
-    display: grid;
-    grid-template-areas:
-    "card1 card2 card3 card4"
-    "card5 card6 card7 card8";
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 .card {
-    background: rgba( 255, 255, 255, 0.15 );
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur( 18px );
-    -webkit-backdrop-filter: blur( 18px );
+    margin-top: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     justify-self: center;
     border-radius: 10px;
@@ -324,7 +241,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    gap: 5%;
+    width: 20vw;
 }
 .cardInfo {
     display: flex;
@@ -345,6 +262,86 @@ footer {
     height: 40px;
     width: 40px;
 }
+.footer{
+    margin-top: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+}
+
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #FFF;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #E91E63;
+    width: 50px;
+    height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #DDD;
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+    color: #FFF;
+    padding-left: 7px;
+}
+
+.footer-col .social-links a {
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 10px 10px 0;
+    line-height: 40px;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #151515;
+    background-color: #FFF;
+}
+
 @media (max-width: 1200px) {
 
     header {
@@ -358,6 +355,12 @@ footer {
     }
 }
 @media (max-width: 768px) {
+    .help {
+        display: none;
+    }
+    .card {
+        width: 100vw;
+    }
     .bucket span {
         display: none;
     }
@@ -394,14 +397,21 @@ footer {
         width: 80%;
         display: grid;
         grid-template-areas:
-        "originalAutopart notOriginalAutoparts"
-        "forVAZ forBody"
-        "forTO autoGlasses"
-        "carOil autoChemical"
-        "wheels batteryGenerator"
-        "autoLights forSuppliers";
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-columns: 1fr 1fr;
+        "originalAutopart"
+        "notOriginalAutoparts"
+        "forVAZ"
+        "forBody"
+        "forTO"
+        "autoGlasses"
+        "carOil"
+        "autoChemical"
+        "wheels"
+        "batteryGenerator"
+        "autoLights"
+        "forSuppliers";
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: 1fr;
+        justify-content: center;
     }
     .categoryContent {
         gap: 5%;
@@ -416,13 +426,15 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    .cards {
-        grid-template-areas:
-        "card1 card2"
-        "card3 card4"
-        "card5 card6"
-        "card7 card8";
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: 1fr 1fr;
+    .arrow {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        justify-content: start;
+    }
+    .textCategoryContent {
+        text-align: center;
     }
 }

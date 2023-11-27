@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * , :before , :after {
     margin: 0;
     padding: 0;
@@ -9,11 +8,11 @@
 
 
 body {
-    font-family: "Poppins",sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main {
-    background-color: #333333;
+    background: linear-gradient(45deg, #002147, #004225, #4b0082);
     height: 100vh;
     width: 100%;
     display: flex;

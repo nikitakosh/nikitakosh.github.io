@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // Находим все кнопки "Add to Basket"
     const addToBasketButtons = document.querySelectorAll('.addInBasket');
@@ -11,16 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
             const cardName = cardContainer.querySelector('.name').textContent;
             const cardPrice = parseFloat(cardContainer.querySelector('.price').textContent.replace('P', '').trim());
 
-            // Вызываем функцию addToBasket с данными карточки
-            addToBasket({ name: cardName, price: cardPrice });
+            // Создаем объект с данными карточки
+            const cardData = { name: cardName, price: cardPrice };
+
+            // Получаем текущий массив карточек из localStorage
+            const existingCards = JSON.parse(localStorage.getItem('selectedCards')) || [];
+
+            // Добавляем новую карточку в массив
+            existingCards.push(cardData);
+
+            // Сохраняем обновленный массив в localStorage
+            localStorage.setItem('selectedCards', JSON.stringify(existingCards));
+
+            alert('Карточка добавлена в корзину!');
         });
     });
-
-    // Функция для добавления карточки в корзину
-    function addToBasket(cardData) {
-        // Преобразуем объект в строку и сохраняем в localStorage
-        localStorage.setItem('selectedCard', JSON.stringify(cardData));
-        // Переходим на другую страницу
-        window.location.href = 'shoppingCart.html';
-    }
 });
+
+
+window.addEventListener('beforeunload', function () {
+    localStorage.clear();
+});
+
