@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-
+document.addEventListener("DOMContentLoaded", function () {
     const imageForCarousel1 = document.getElementById('imgForСarousel1');
     const imageForCarousel2 = document.getElementById('imgForСarousel2');
     const imageForCarousel3 = document.getElementById('imgForСarousel3');
@@ -12,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (windowWidth < 700) {
                 return "resources/imgCard1.svg";
             } else {
-                return "resources/sliderBackground7.jpg";
+                return "resources/sliderBackground10.jpg";
             }
         }
     }
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (windowWidth < 700) {
                 return "resources/imgCard2.svg";
             } else {
-                return "resources/sliderBackground8.jpg";
+                return "resources/sliderBackground11.jpg";
             }
         }
     }
@@ -36,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (windowWidth < 700) {
                 return "resources/imgCard3.svg";
             } else {
-                return "resources/sliderBackground9.jpg";
+                return "resources/sliderBackground12.jpg";
             }
         }
     }
     handleResizeForCarousel1();
     handleResizeForCarousel2();
     handleResizeForCarousel3();
-    // Находим все кнопки "Add to Basket"
+
     const addToBasketButtons = document.querySelectorAll('.addInBasket');
 
     // Добавляем слушателя события на каждую кнопку
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const cardPrice = parseFloat(cardContainer.querySelector('.price').textContent.replace('P', '').trim());
             const imgSrc = document.querySelector(".card img").src;
             // Создаем объект с данными карточки
-            const cardData = { name: cardName, price: cardPrice, imgSrc: imgSrc};
+            const cardData = { name: cardName, price: cardPrice, imgSrc: imgSrc };
 
             // Получаем текущий массив карточек из localStorage
             const existingCards = JSON.parse(localStorage.getItem('selectedCards')) || [];
@@ -70,8 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
@@ -96,13 +98,10 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 document.querySelector(".bucket").addEventListener("click", function() {
-    window.location.href = "shoppingCart.html";
+    window.location.href = "index.html";
 });
 document.querySelector(".profile").addEventListener("click", function() {
     window.location.href = "registration.html";
-});
-document.querySelector(".category").addEventListener("click", function() {
-    window.location.href = "category.html";
 });
 document.querySelector(".card").addEventListener("click", function() {
     window.location.href = "productPage.html";

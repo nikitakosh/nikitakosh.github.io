@@ -11,6 +11,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
 }
 .contentMain {
@@ -30,6 +31,8 @@ header {
 }
 
 .titleLogo {
+    font-weight: bold;
+    font-size: 1.5em;
     margin-left: 5px;
     grid-area: titleLogo;
 }
@@ -47,9 +50,14 @@ header {
     width: 70%;
 }
 .bucket {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     grid-area: bucket;
+    transition: all 0.5s;
+}
+.bucket:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 .bucket div {
     width: 100%;
@@ -63,9 +71,14 @@ header {
     margin-right: 5px;
 }
 .profile {
+    cursor: pointer;
     width: 100%;
     height: 100%;
+    transition: all 0.5s;
     grid-area: profile;
+}
+.profile:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 .profile div {
     width: 100%;
@@ -105,13 +118,18 @@ header {
     display: flex;
     align-items: center;
     height: 100%;
-    padding-left: 2%;
 }
 .categoryContent div {
     display: flex;
     flex-direction: column;
 }
-
+.category {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.category:hover {
+    transform: scale(1.03);
+}
 .originalAutoparts {
     border-radius: 10px;
     background: rgba( 255, 255, 255, 0.15 );
@@ -222,16 +240,15 @@ header {
     bottom: 4px;
     right: 4px;
 }
-
-.cards {
-    margin: 1vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+.recommend {
+    margin-top: 5vh;
+}
+.mostBuy {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 .card {
-    margin-top: 2vh;
+    cursor: pointer;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -242,6 +259,39 @@ header {
     align-items: center;
     flex-direction: column;
     width: 20vw;
+    flex-shrink: 0;
+    transition: all 0.5s;
+
+}
+.card:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.mostBuyText {
+    margin-left: 1vw;
+    font-size: 2em;
+}
+.recommendText {
+    margin-left: 1vw;
+    font-size: 2em;
+}
+.scrollCards {
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #888888; /* Цвет ползунка */
+        border-radius: 5px; /* Скругленные углы ползунка */
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Цвет трека */
+    }
+    padding: 2vh;
+    display: flex;
+    gap: 2vw;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 .cardInfo {
     display: flex;
@@ -259,8 +309,139 @@ header {
     justify-content: space-between;
 }
 .card .addInBasket {
+    cursor: pointer;
     height: 40px;
     width: 40px;
+
+}
+.card .addInBasket:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+.slider {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    position: relative;
+    display: flex;
+    width: 70vw;
+    height: 60vh;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+.mySlides {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.mySlides div {
+    width: 50%;
+    color: #FFFFFF;
+    font-weight: bold;
+    top: 30%;
+    right: 15%;
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+}
+.mySlides    img {
+    border-radius: 20px;
+    width: 100% ;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
 }
 .footer{
     margin-top: 2vh;
@@ -324,9 +505,7 @@ ul {
     padding-left: 7px;
 }
 
-.footer-col .social-links a {
-    color: #FFF;
-    background-color: rgba(255, 255, 255, 0.2);
+.footer-col .social-links a {;
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -335,11 +514,19 @@ ul {
     margin: 0 10px 10px 0;
     line-height: 40px;
     transition: all 0.5s ease;
+    background-size: cover;
 }
-
+.youtube {
+    background-image: url("resources/Youtube.svg");
+}
+.telegram {
+    background-image: url("resources/Telegram.svg");
+}
+.mail {
+    background-image: url("resources/Mail_ru.svg");
+}
 .footer-col .social-links a:hover {
-    color: #151515;
-    background-color: #FFF;
+
 }
 
 @media (max-width: 1200px) {
@@ -356,11 +543,14 @@ ul {
 
 }
 @media (max-width: 768px) {
-    .help {
+    .mySlides p {
         display: none;
     }
     .card {
-        width: 100vw;
+        width: 70vw;
+    }
+    .help {
+        display: none;
     }
     .bucket span {
         display: none;
@@ -430,8 +620,17 @@ ul {
     .arrow {
         display: none;
     }
+    .categoryContent {
+        padding-bottom: 2vh;
+    }
+}
+@media (max-width: 500px) {
+    .mySlides div {
+        display: none;
+    }
 }
 @media (max-width: 320px) {
+
     .container {
         justify-content: start;
     }

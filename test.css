@@ -1,0 +1,50 @@
+.sm_dashboard{
+    max-width:1200px;
+    min-width:350px;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding:40px;
+}
+.sm_card{
+    width:250px;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    margin-right: 6px;
+}
+.sm_shelf_renderer{
+    display: block;
+    position: relative;
+    margin-bottom:30px;
+}
+#sm_scroll_container.sm_horizontal_list_renderer {
+    overflow-x: hidden;
+}
+#items.sm_horizontal_list_renderer {
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+    will-change: transform;
+    display: inline-block;
+    white-space: nowrap;
+}
+.sm_card .card-content{
+    padding: 8px 14px;
+}
+.sm_card .card-content .card-title{
+    margin-bottom: 0px;
+}
+#sm_left_arrow{
+    position: absolute;
+    top: calc(50% - 40px);
+    left: -20px;
+}
+#sm_right_arrow{
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(100% - 20px);
+    z-index:1;
+}
+.sm_self_title{
+    font-size:22px;
+}

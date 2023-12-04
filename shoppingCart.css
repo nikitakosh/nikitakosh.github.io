@@ -9,6 +9,8 @@ header {
     align-items: center;
 }
 .titleLogo {
+    font-weight: bold;
+    font-size: 1.5em;
     margin-left: 5px;
     grid-area: titleLogo;
 }
@@ -26,9 +28,14 @@ header {
     width: 70%;
 }
 .bucket {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     grid-area: bucket;
+    transition: all 0.5s;
+}
+.bucket:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 .bucket div {
     width: 100%;
@@ -50,9 +57,14 @@ header {
     margin-right: 5px;
 }
 .profile {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     grid-area: profile;
+    transition: all 0.5s;
+}
+.profile:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 .profile div {
     width: 100%;
@@ -137,6 +149,97 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: space-between;
+}
+.footer{
+    margin-top: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+}
+
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #FFF;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #E91E63;
+    width: 50px;
+    height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #DDD;
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+    color: #FFF;
+    padding-left: 7px;
+}
+
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 10px 10px 0;
+    line-height: 40px;
+    transition: all 0.5s ease;
+    background-size: cover;
+}
+.youtube {
+    background-image: url("resources/Youtube.svg");
+}
+.telegram {
+    background-image: url("resources/Telegram.svg");
+}
+.mail {
+    background-image: url("resources/Mail_ru.svg");
+}
+
+.footer-col .social-links a:hover {
+    color: #151515;
+    background-color: #FFF;
 }
 @media (max-width: 768px){
     .card {
@@ -173,5 +276,15 @@ body {
         border: 1px solid;
         height: 30%;
         width: 100%;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        justify-content: start;
+    }
+}
+@media (max-width: 768px){
+    .help {
+        display: none;
     }
 }

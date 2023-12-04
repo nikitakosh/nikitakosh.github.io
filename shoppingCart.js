@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <img class="cardImg1" src="resources/imgCard1.svg" alt="imgCard">
+            <img class="cardImg1" src="${cardData.imgSrc}" alt="imgCard">
             <div class="cardInfo">
                 <span class="name">${cardData.name}</span>
                 <div class="priceAndBasket">
-                    <span class="price">${cardData.price}</span>
+                    <span class="price">${cardData.price + " Р"}</span>
                     <div class="amount">
                         <img src="resources/minus.svg" alt="minus" width="20px" height="20px" class="minusBtn">
                         <span class="amountValue">1</span>
@@ -64,4 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
         attachMinusEvent(minusBtn, amountValue);
         attachPlusEvent(plusBtn, amountValue);
     });
+});
+document.querySelector(".bucket").addEventListener("click", function() {
+    window.location.href = "index.html";
+});
+document.querySelector(".profile").addEventListener("click", function() {
+    window.location.href = "registration.html";
 });

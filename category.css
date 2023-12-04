@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+}
+.main {
+    background: linear-gradient(45deg, #002147, #004225, #4b0082);
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.slider {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    position: relative;
+    display: flex;
+    width: 70vw;
+    height: 60vh;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+.mySlides {
+    width: 100%;
+    height: 100%;
+    display: none
+}
+.mySlides div {
+    width: 50%;
+    color: #FFFFFF;
+    font-weight: bold;
+    top: 30%;
+    right: 15%;
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+}
+.mySlides    img {
+    border-radius: 20px;
+    width: 100% ;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+.cards {
+    margin: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.card {
+    cursor: pointer;
+    margin-top: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    justify-self: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    transition: all 0.5s;
+}
+.card:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card img {
+    width: 75%;
+}
+.card .cardImg1 {
+    width: 50%;
+}
+.priceAndBasket {
+    display: flex;
+    justify-content: space-between;
+}
+.card .addInBasket {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    transition: all 0.5s ease-in-out;
+}
+.card .addInBasket:hover {
+    transform: scale(1.1);
+}
+.footer{
+    margin-top: 2vh;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+}
+
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #FFF;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #E91E63;
+    width: 50px;
+    height: 2px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #DDD;
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+    color: #FFF;
+    padding-left: 7px;
+}
+
+.footer-col .social-links a {;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 10px 10px 0;
+    line-height: 40px;
+    transition: all 0.5s ease;
+    background-size: cover;
+}
+.youtube {
+    background-image: url("resources/Youtube.svg");
+}
+.telegram {
+    background-image: url("resources/Telegram.svg");
+}
+.mail {
+    background-image: url("resources/Mail_ru.svg");
+}
+
+.footer-col .social-links a:hover {
+    color: #151515;
+    background-color: #FFF;
+}
+
+
+header {
+    display: grid;
+    height: 7vh;
+    grid-template-areas:
+    "titleLogo inputField bucket profile";
+    grid-template-rows: 1fr;
+    grid-template-columns: 5% 1fr 15% 15%;
+    align-items: center;
+}
+.titleLogo {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 5px;
+    grid-area: titleLogo;
+}
+.inputField {
+    grid-area: inputField;
+    padding-left: 30%;
+}
+
+.inputField input {
+    padding: 10px;
+    position: relative;
+    border-radius: 6px;
+    background-color: #F4F5F6;
+    height: 30%;
+    width: 70%;
+}
+.bucket {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    grid-area: bucket;
+    transition: all 0.5s;
+}
+.bucket:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.bucket div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.bucket span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.bucket img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    grid-area: profile;
+}
+.profile:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+}
+.profile div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.profile span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.profile img {
+    margin-right: 5px;
+}
+.breakLine {
+    width: 100%;
+    height: 1px;
+    flex-shrink: 0;
+    background: #E3E3E8;
+}
+@media (max-width: 500px) {
+    .mySlides div {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        justify-content: start;
+    }
+}
+@media (max-width: 768px){
+    .help {
+        display: none;
+    }
+    .card {
+        width: 100vw;
+    }
+    .bucket span {
+        display: none;
+    }
+    .profile span {
+        display: none;
+    }
+    header {
+        display: grid;
+        height: 14vh;
+        grid-template-areas:
+        "titleLogo bucket profile"
+        "inputField inputField inputField";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 20% 20%;
+        align-items: center;
+    }
+    .inputField {
+        grid-area: inputField;
+        padding: 0;
+    }
+    .inputField div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .inputField input {
+        border-radius: 6px;
+        background-color: #F4F5F6;
+        border: 1px solid;
+        height: 30%;
+        width: 100%;
+    }
+}
