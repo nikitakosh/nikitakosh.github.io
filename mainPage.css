@@ -486,7 +486,11 @@ ul {
     width: 50px;
     height: 2px;
 }
-
+.myName {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
 .footer-col ul li:not(:last-child) {
     margin-bottom: 10px;
 }
@@ -528,7 +532,7 @@ ul {
 .footer-col .social-links a:hover {
 
 }
-
+.
 @media (max-width: 1200px) {
 
     header {

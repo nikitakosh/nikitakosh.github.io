@@ -193,7 +193,11 @@ body {
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.myName {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
 .container {
     display: flex;
     justify-content: space-around;

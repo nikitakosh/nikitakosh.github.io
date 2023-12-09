@@ -209,7 +209,11 @@ header {
     position: relative;
     bottom: 0;
 }
-
+.myName {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
 .container {
     display: flex;
     justify-content: space-around;
@@ -319,6 +323,17 @@ ul {
     }
 }
 @media (max-width: 1200px) {
+
+    header {
+        display: grid;
+        height: 7vh;
+        grid-template-areas:
+        "titleLogo inputField bucket profile";
+        grid-template-rows: 1fr;
+        grid-template-columns: 5% 1fr 20% 20%;
+        align-items: center;
+    }
+}@media (max-width: 1200px) {
 
     header {
         display: grid;
