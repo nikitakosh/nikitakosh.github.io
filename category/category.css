@@ -265,13 +265,13 @@ ul {
     background-size: cover;
 }
 .youtube {
-    background-image: url("resources/Youtube.svg");
+    background-image: url("Youtube.svg");
 }
 .telegram {
-    background-image: url("resources/Telegram.svg");
+    background-image: url("Telegram.svg");
 }
 .mail {
-    background-image: url("resources/Mail_ru.svg");
+    background-image: url("Mail_ru.svg");
 }
 
 .footer-col .social-links a:hover {

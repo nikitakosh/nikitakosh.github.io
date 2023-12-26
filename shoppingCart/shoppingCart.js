@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="priceAndBasket">
                     <span class="price">${cardData.price + " Р"}</span>
                     <div class="amount">
-                        <img src="resources/minus.svg" alt="minus" width="20px" height="20px" class="minusBtn">
+                        <img src="../resources/minus.svg" alt="minus" width="20px" height="20px" class="minusBtn">
                         <span class="amountValue">1</span>
-                        <img src="resources/plus.svg" alt="plus" width="20px" height="20px" class="plusBtn">
+                        <img src="../resources/plus.svg" alt="plus" width="20px" height="20px" class="plusBtn">
                     </div>
                 </div>
             </div>
