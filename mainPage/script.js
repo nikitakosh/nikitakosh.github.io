@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
         function getSrc() {
             const windowWidth = window.innerWidth;
             if (windowWidth < 700) {
-                return "resources/imgCard1.svg";
+                return "../resources/imgCard1.svg";
             } else {
-                return "resources/sliderBackground7.jpg";
+                return "../resources/sliderBackground7.jpg";
             }
         }
     }
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
         function getSrc() {
             const windowWidth = window.innerWidth;
             if (windowWidth < 700) {
-                return "resources/imgCard2.svg";
+                return "../resources/imgCard2.svg";
             } else {
-                return "resources/sliderBackground8.jpg";
+                return "../resources/sliderBackground8.jpg";
             }
         }
     }
@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
         function getSrc () {
             const windowWidth = window.innerWidth;
             if (windowWidth < 700) {
-                return "resources/imgCard3.svg";
+                return "../resources/imgCard3.svg";
             } else {
-                return "resources/sliderBackground9.jpg";
+                return "../resources/sliderBackground9.jpg";
             }
         }
     }
@@ -96,14 +96,14 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 document.querySelector(".bucket").addEventListener("click", function() {
-    window.location.href = "shoppingCart.html";
+    window.location.href = "../shoppingCart/shoppingCart.html";
 });
 document.querySelector(".profile").addEventListener("click", function() {
-    window.location.href = "registration.html";
+    window.location.href = "../registration/registration.html";
 });
 document.querySelector(".category").addEventListener("click", function() {
-    window.location.href = "category.html";
+    window.location.href = "../category/category.html";
 });
 document.querySelector(".card").addEventListener("click", function() {
-    window.location.href = "productPage.html";
+    window.location.href = "../productPage/productPage.html";
 });

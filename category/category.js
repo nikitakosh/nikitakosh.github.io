@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
         function getSrc() {
             const windowWidth = window.innerWidth;
             if (windowWidth < 700) {
-                return "resources/imgCard1.svg";
+                return "../resources/imgCard1.svg";
             } else {
-                return "resources/sliderBackground10.jpg";
+                return "../resources/sliderBackground10.jpg";
             }
         }
     }
@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
         function getSrc() {
             const windowWidth = window.innerWidth;
             if (windowWidth < 700) {
-                return "resources/imgCard2.svg";
+                return "../resources/imgCard2.svg";
             } else {
-                return "resources/sliderBackground11.jpg";
+                return "../resources/sliderBackground11.jpg";
             }
         }
     }
@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
         function getSrc () {
             const windowWidth = window.innerWidth;
             if (windowWidth < 700) {
-                return "resources/imgCard3.svg";
+                return "../resources/imgCard3.svg";
             } else {
-                return "resources/sliderBackground12.jpg";
+                return "../resources/sliderBackground12.jpg";
             }
         }
     }
@@ -98,11 +98,11 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 document.querySelector(".bucket").addEventListener("click", function() {
-    window.location.href = "index.html";
+    window.location.href = "../mainPage/index.html";
 });
 document.querySelector(".profile").addEventListener("click", function() {
-    window.location.href = "registration.html";
+    window.location.href = "../registration/registration.html";
 });
 document.querySelector(".card").addEventListener("click", function() {
-    window.location.href = "productPage.html";
+    window.location.href = "../productPage/productPage.html";
 });
